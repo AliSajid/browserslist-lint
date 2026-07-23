@@ -14,16 +14,17 @@ Or try online: [`browsersl.ist`](https://browsersl.ist/)
 
 Rules:
 
-* `missedNotDead`: lack of `no dead` with queries like `last 2 versions`.
-* `countryWasIgnored`: bad coverage in some country with >10M Internet users.
-* `limitedBrowsers`: ignoring browsers diversity by calling only
+- `missedNotDead`: lack of `no dead` with queries like `last 2 versions`.
+- `countryWasIgnored`: bad coverage in some country with >10M Internet users.
+- `limitedBrowsers`: ignoring browsers diversity by calling only
   a few browsers directly in config.
-* `alreadyDead`: browser with `not` is already in `not dead` or `defaults`.
+- `alreadyDead`: browser with `not` is already in `not dead` or `defaults`.
 
-<a href="https://evilmartians.com/?utm_source=browserslist-lint">
-  <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg"
-       alt="Sponsored by Evil Martians" width="236" height="54">
-</a>
+---
+
+<img src="https://cdn.evilmartians.com/badges/logo-no-label.svg" alt="" width="22" height="16" />  Browserslist Lint is built by <b><a href="https://evilmartians.com/">Evil Martians</a></b>, an American design and engineering consultancy for <b>developer tools, AI, and cybersecurity startups</b>.
+
+---
 
 ## Pre-Commit Hook
 
@@ -41,10 +42,10 @@ repos:
 import { lint } from 'browserslist-lint'
 
 lint('defaults, not ie 11') // => [{
-                            //      id: 'alreadyDead',
-                            //      message: '`not ie 11` already in `defaults`'
-                            //      fixed: 'defaults'
-                            //    }]
+//      id: 'alreadyDead',
+//      message: '`not ie 11` already in `defaults`'
+//      fixed: 'defaults'
+//    }]
 
 // Without option with find Browserslist automatically
 lint() // => [{ id, message, fixed }]
